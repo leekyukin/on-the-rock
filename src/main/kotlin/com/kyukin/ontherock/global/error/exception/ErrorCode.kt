@@ -18,4 +18,7 @@ enum class ErrorCode (
 
     IMAGE_EMPTY(422, "이미지가 비었습니다."),
     UPLOAD_IMAGE_FAILED(422, "이미지 업로드에 실패했습니다."),
+
+    BIBLE_NOT_FOUND( 422, "검색결과를 찾을 수 없습니다."),
+    NOT_AVAILABLE_WORD( 404, "옳지 않은 검색어입니다."),
 }
