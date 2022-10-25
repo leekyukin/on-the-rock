@@ -1,8 +1,6 @@
 package com.kyukin.ontherock.global.error.exception
 
-import com.kyukin.ontherock.global.error.exception.ErrorCode
-
-open class IMomException (
+open class OTRException (
     val errorCode: ErrorCode,
     message: String,
 ): RuntimeException(message) {

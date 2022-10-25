@@ -1,7 +1,7 @@
 package com.kyukin.ontherock.global.error
 
 import com.kyukin.ontherock.global.error.exception.ErrorCode
-import com.kyukin.ontherock.global.error.exception.IMomException
+import com.kyukin.ontherock.global.error.exception.OTRException
 import org.slf4j.LoggerFactory
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.ExceptionHandler
@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
 import javax.servlet.http.HttpServletRequest
 
 @RestControllerAdvice
-class IMomExceptionHandler {
+class OTRExceptionHandler {
 
     private val log = LoggerFactory.getLogger(javaClass)
 
     @ResponseStatus(value = HttpStatus.CONFLICT)
-    @ExceptionHandler(IMomException::class)
+    @ExceptionHandler(OTRException::class)
     fun handleIceCreamException(
-        e: IMomException,
+        e: OTRException,
         request: HttpServletRequest
     ): ErrorResponse {
         log.error("errorCode: {}, url: {}, message: {}",
