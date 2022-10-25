@@ -2,13 +2,13 @@ version: '3'
 
 services:
   mysql:
-    container_name: icecream_mysql
+    container_name: otr_mysql
     image: mysql/mysql-server:5.7
     environment:
       MYSQL_ROOT_HOST: "%"
-      MYSQL_USER: ice
-      MYSQL_PASSWORD: icecream
-      MYSQL_DATABASE: icecream
+      MYSQL_USER: otr
+      MYSQL_PASSWORD: jesusisking
+      MYSQL_DATABASE: otr
     ports:
       - "3306:3306"
     command:

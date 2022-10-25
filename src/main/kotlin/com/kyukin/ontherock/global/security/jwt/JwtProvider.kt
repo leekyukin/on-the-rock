@@ -1,4 +1,4 @@
-package com.jjarappappa.imom.global.security.jwt
+package com.kyukin.ontherock.global.security.jwt
 
 import com.kyukin.ontherock.global.config.properties.JwtProperties
 import com.kyukin.ontherock.global.security.jwt.exception.ExpiredTokenException

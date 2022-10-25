@@ -1,7 +1,7 @@
 package com.kyukin.ontherock.global.security.jwt.filter
 
 import com.kyukin.ontherock.global.security.auth.AuthDetailsService
-import com.jjarappappa.imom.global.security.jwt.JwtProvider
+import com.kyukin.ontherock.global.security.jwt.JwtProvider
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource

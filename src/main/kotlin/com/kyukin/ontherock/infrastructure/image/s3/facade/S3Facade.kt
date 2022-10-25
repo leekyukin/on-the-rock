@@ -1,4 +1,4 @@
-package com.jjarappappa.imom.infrastructure.image.s3.facade
+package com.kyukin.ontherock.infrastructure.image.s3.facade
 
 import com.amazonaws.services.s3.AmazonS3Client
 import com.amazonaws.services.s3.model.CannedAccessControlList

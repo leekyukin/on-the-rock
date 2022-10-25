@@ -26,7 +26,7 @@ class UserFacade (
             throw PhoneNumberAlreadyExists.EXCEPTION
         }
 
-        if(userRepository.existsByNickname(request.nickName)) {
+        if(userRepository.existsByNickname(request.nickname)) {
             throw NickNameAlreadyExists.EXCEPTION
         }
     }

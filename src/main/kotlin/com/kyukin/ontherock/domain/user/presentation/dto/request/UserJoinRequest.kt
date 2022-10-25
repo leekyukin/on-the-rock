@@ -13,7 +13,7 @@ data class UserJoinRequest (
     val name: String,
 
     @field:NotBlank
-    var nickName: String,
+    var nickname: String,
 
     @field:Email
     val email: String,
@@ -34,7 +34,7 @@ data class UserJoinRequest (
     fun toEntity(passwordEncoder: PasswordEncoder): User {
         return User(
             name,
-            nickName,
+            nickname,
             email,
             passwordEncoder.encode(password),
             Authority.USER,

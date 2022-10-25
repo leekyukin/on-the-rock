@@ -1,7 +1,7 @@
 package com.kyukin.ontherock.domain.image.service
 
 import com.kyukin.ontherock.domain.image.controller.dto.ImageUrlResponse
-import com.jjarappappa.imom.infrastructure.image.s3.facade.S3Facade
+import com.kyukin.ontherock.infrastructure.image.s3.facade.S3Facade
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.multipart.MultipartFile

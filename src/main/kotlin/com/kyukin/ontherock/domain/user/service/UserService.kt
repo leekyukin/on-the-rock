@@ -8,7 +8,7 @@ import com.kyukin.ontherock.domain.user.presentation.dto.request.UserJoinRequest
 import com.kyukin.ontherock.domain.user.presentation.dto.request.UserLoginRequest
 import com.kyukin.ontherock.domain.user.presentation.dto.response.TokenResponse
 import com.kyukin.ontherock.domain.user.presentation.dto.response.UserProfileResponse
-import com.jjarappappa.imom.global.security.jwt.JwtProvider
+import com.kyukin.ontherock.global.security.jwt.JwtProvider
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
@@ -40,7 +40,7 @@ class UserService (
     }
 
     private fun checkPassword(actual: String, expected: String) {
-        if (passwordEncoder.matches(actual, expected)) {
+        if (!passwordEncoder.matches(actual, expected)) {
             throw PasswordMismatchException.EXCEPTION
         }
     }
