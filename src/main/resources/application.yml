@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/icecream
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ice
+    password: icecream
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  access-token-valid-time: ${JWT_ACCESS_TIME}
+  prefix: Bearer
+  header: Authorization
+  secret-key: ${JWT_SECRET}
+
+cloud:
+  aws:
+    credentials:
+      access-key: ${S3_ACCESS_KEY}
+      secret-key: ${S3_SECRET_KEY}
+    s3:
+      bucket: ${S3_BUCKET:imom-img-bucket}
+    region:
+      static: ${S3_REGION:ap-northeast-2}
+    stack:
+      auto: false
