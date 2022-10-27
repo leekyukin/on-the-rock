@@ -1,12 +1,14 @@
 package com.kyukin.ontherock.domain.bible.presentation.dto.res
 
 import com.kyukin.ontherock.domain.bible.domain.Bible
+import com.kyukin.ontherock.domain.bible.domain.type.LongLabel
+import com.kyukin.ontherock.domain.bible.domain.type.Testament
 
 data class BibleResponse constructor(
 
-    val testament: Char,
+    val testament: Testament,
 
-    val longLabel: String,
+    val longLabel: LongLabel,
 
     val chapter: Int,
 
