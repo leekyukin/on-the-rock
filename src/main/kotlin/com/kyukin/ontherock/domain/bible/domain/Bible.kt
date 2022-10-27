@@ -2,7 +2,7 @@ package com.kyukin.ontherock.domain.bible.domain
 
 import com.kyukin.ontherock.domain.bible.domain.type.LongLabel
 import com.kyukin.ontherock.domain.bible.domain.type.ShortLabel
-import com.kyukin.ontherock.domain.bible.domain.type.Testaments
+import com.kyukin.ontherock.domain.bible.domain.type.Testament
 import javax.persistence.*
 
 @Entity
@@ -26,7 +26,7 @@ class Bible (
 
     @Enumerated(EnumType.STRING)
     @Column(length = 1, nullable = false)
-    val testaments: Testaments, // 구/신약 ('구', '신')
+    val testament: Testament, // 구/신약 ('구', '신')
 
     @Enumerated(EnumType.STRING)
     @Column(name = "long_label", length = 10, nullable = false)

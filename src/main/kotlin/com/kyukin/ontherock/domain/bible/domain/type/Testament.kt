@@ -1,5 +1,5 @@
 package com.kyukin.ontherock.domain.bible.domain.type
 
-enum class Testaments {
+enum class Testament {
     신, 구
 }
