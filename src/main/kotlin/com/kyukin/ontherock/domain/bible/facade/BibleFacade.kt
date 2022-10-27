@@ -4,6 +4,7 @@ import com.kyukin.ontherock.domain.bible.domain.repository.BibleRepository
 import com.kyukin.ontherock.domain.bible.exception.BibleNotFoundException
 import com.kyukin.ontherock.domain.bible.exception.NotAvailableWordException
 import com.kyukin.ontherock.domain.bible.presentation.dto.res.BibleResponse
+import org.springframework.data.domain.Page
 import org.springframework.stereotype.Component
 
 @Component
@@ -17,8 +18,8 @@ class BibleFacade constructor(
         }
     }
 
-    fun validateListSize(results: List<BibleResponse>) {
-        if (results.isEmpty()) {
+    fun validateListSize(results: Page<BibleResponse>) {
+        if (results.isEmpty) {
             throw BibleNotFoundException.EXCEPTION
         }
     }
