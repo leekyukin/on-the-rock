@@ -1,11 +1,15 @@
 package com.kyukin.ontherock.domain.bible.facade
 
+import com.kyukin.ontherock.domain.bible.domain.Bible
 import com.kyukin.ontherock.domain.bible.domain.repository.BibleRepository
 import com.kyukin.ontherock.domain.bible.exception.BibleNotFoundException
 import com.kyukin.ontherock.domain.bible.exception.NotAvailableWordException
 import com.kyukin.ontherock.domain.bible.presentation.dto.res.BibleResponse
 import org.springframework.data.domain.Page
 import org.springframework.stereotype.Component
+
+
+
 
 @Component
 class BibleFacade constructor(
@@ -22,5 +26,10 @@ class BibleFacade constructor(
         if (results.isEmpty) {
             throw BibleNotFoundException.EXCEPTION
         }
+    }
+
+    fun findBibleById(id: Long): Bible {
+        return bibleRepository.findBibleById(id)
+            ?: throw BibleNotFoundException.EXCEPTION
     }
 }

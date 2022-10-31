@@ -11,7 +11,7 @@ import javax.validation.Valid
 
 @RestController
 @RequestMapping("/auth")
-class AuthController (
+class AuthController constructor(
     private val userService: UserService,
 ) {
 
