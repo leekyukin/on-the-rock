@@ -22,7 +22,7 @@ class BibleService constructor(
         val results = bibleRepository.findBySentenceContains(word, pageable)
             .map(BibleResponse::of)
 
-        bibleFacade.validateListSize(results)
+        bibleFacade.validateEmptyPage(results)
 
         return results
     }

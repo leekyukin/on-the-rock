@@ -18,7 +18,7 @@ class BibleFacade constructor(
         }
     }
 
-    fun validateListSize(results: Page<BibleResponse>) {
+    fun validateEmptyPage(results: Page<BibleResponse>) {
         if (results.isEmpty) {
             throw BibleNotFoundException.EXCEPTION
         }
