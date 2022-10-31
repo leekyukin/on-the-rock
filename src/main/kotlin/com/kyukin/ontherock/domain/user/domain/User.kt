@@ -6,9 +6,9 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "tbl_user")
-class User (
+class User constructor(
         @Column(length = 50, nullable = false)
-        val name: String,
+    val name: String,
 
         @Column(length = 15, nullable = false, unique = true)
         var nickname: String,

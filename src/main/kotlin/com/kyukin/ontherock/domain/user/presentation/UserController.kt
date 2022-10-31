@@ -8,7 +8,7 @@ import javax.validation.Valid
 
 @RestController
 @RequestMapping("/user")
-class UserController (
+class UserController constructor(
     private val userService: UserService,
 ){
 

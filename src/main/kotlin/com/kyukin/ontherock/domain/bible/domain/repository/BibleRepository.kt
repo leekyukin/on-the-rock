@@ -8,4 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository
 interface BibleRepository: JpaRepository<Bible, Long>{
 
     fun findBySentenceContains(word: String, pageable: Pageable): Page<Bible>
+
+    fun findByLongLabelAndChapter(longLabel: LongLabel, chapter: Int, pageable: Pageable): Page<Bible>
 }
