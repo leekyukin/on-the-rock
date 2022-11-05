@@ -3,6 +3,7 @@ package com.kyukin.ontherock.domain.bible.domain
 import com.kyukin.ontherock.domain.bible.domain.type.LongLabel
 import com.kyukin.ontherock.domain.bible.domain.type.ShortLabel
 import com.kyukin.ontherock.domain.bible.domain.type.Testament
+import com.kyukin.ontherock.domain.user.domain.MyBible
 import javax.persistence.*
 
 @Entity
@@ -33,7 +34,10 @@ class Bible (
     val longLabel: LongLabel, // 책 ("창세기", "출에굽기")
 
     @Column(name = "short_label", length = 5, nullable = false)
-    val shortLabel: ShortLabel, // 책 ("창", "출")
+    val shortLabel: ShortLabel, // 책 ("창", "출"),
+
+    @OneToMany(mappedBy = "bible", cascade = [CascadeType.ALL])
+    val myBibleList: MutableList<MyBible> = mutableListOf(),
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "bible_id", nullable = false, unique = true)
