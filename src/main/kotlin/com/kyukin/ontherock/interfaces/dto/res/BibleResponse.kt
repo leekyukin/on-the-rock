@@ -1,4 +1,4 @@
-package com.kyukin.ontherock.domain.bible.presentation.dto.res
+package com.kyukin.ontherock.interfaces.dto.res
 
 import com.kyukin.ontherock.domain.bible.domain.Bible
 import com.kyukin.ontherock.domain.bible.domain.type.LongLabel

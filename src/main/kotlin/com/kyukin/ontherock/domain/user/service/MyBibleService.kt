@@ -18,7 +18,7 @@ class MyBibleService constructor(
         var bible = bibleFacade.findBibleById(id)
         var myBible = MyBible.createMyBible(user, bible);
 
-        user.myBibleList.add(myBible);
+//        user.myBibleList.add(myBible);
     }
 
 }
