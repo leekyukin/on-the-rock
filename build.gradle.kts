@@ -28,6 +28,14 @@ dependencies {
 
     runtimeOnly("mysql:mysql-connector-java")
 
+    // MapStruct
+    implementation ("org.mapstruct:mapstruct:1.5.3.Final")
+    annotationProcessor ("org.mapstruct:mapstruct-processor:1.5.3.Final")
+    annotationProcessor(
+        "org.projectlombok:lombok",
+        "org.projectlombok:lombok-mapstruct-binding:0.2.0"
+    )
+
     implementation("io.jsonwebtoken:jjwt-api:0.11.5")
     runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.5")
     runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.5")
