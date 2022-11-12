@@ -1,12 +1,9 @@
 package com.kyukin.ontherock.domain.bible.facade
 
-import com.kyukin.ontherock.domain.bible.domain.Bible
+import com.kyukin.ontherock.domain.bible.Bible
 import com.kyukin.ontherock.infrastructure.bible.BibleRepository
 import com.kyukin.ontherock.domain.bible.exception.BibleNotFoundException
 import org.springframework.stereotype.Component
-
-
-
 
 @Component
 class BibleFacade constructor(

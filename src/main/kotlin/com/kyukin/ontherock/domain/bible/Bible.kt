@@ -1,8 +1,8 @@
-package com.kyukin.ontherock.domain.bible.domain
+package com.kyukin.ontherock.domain.bible
 
-import com.kyukin.ontherock.domain.bible.domain.type.LongLabel
-import com.kyukin.ontherock.domain.bible.domain.type.ShortLabel
-import com.kyukin.ontherock.domain.bible.domain.type.Testament
+import com.kyukin.ontherock.domain.bible.type.LongLabel
+import com.kyukin.ontherock.domain.bible.type.ShortLabel
+import com.kyukin.ontherock.domain.bible.type.Testament
 import javax.persistence.*
 
 @Entity

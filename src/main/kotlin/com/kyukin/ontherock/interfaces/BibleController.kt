@@ -1,6 +1,6 @@
 package com.kyukin.ontherock.interfaces
 
-import com.kyukin.ontherock.domain.bible.domain.type.LongLabel
+import com.kyukin.ontherock.domain.bible.type.LongLabel
 import com.kyukin.ontherock.interfaces.dto.res.BibleResponse
 import com.kyukin.ontherock.domain.bible.service.BibleServiceImpl
 import org.springframework.data.domain.Page

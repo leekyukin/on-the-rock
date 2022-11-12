@@ -1,6 +1,5 @@
 package com.kyukin.ontherock.domain.user.facade
 
-import com.kyukin.ontherock.domain.bible.domain.Bible
 import com.kyukin.ontherock.domain.user.domain.User
 import com.kyukin.ontherock.domain.user.domain.repository.UserRepository
 import com.kyukin.ontherock.domain.user.presentation.dto.request.UserJoinRequest

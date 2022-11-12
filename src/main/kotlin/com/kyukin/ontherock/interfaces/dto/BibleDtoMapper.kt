@@ -1,6 +1,6 @@
 package com.kyukin.ontherock.interfaces.dto
 
-import com.kyukin.ontherock.domain.bible.domain.Bible
+import com.kyukin.ontherock.domain.bible.Bible
 import com.kyukin.ontherock.interfaces.dto.res.BibleResponse
 import org.mapstruct.InjectionStrategy
 import org.mapstruct.Mapper
