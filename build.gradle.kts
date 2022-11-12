@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
 
 plugins {
     id("org.springframework.boot") version "2.7.5"
@@ -6,6 +7,7 @@ plugins {
     kotlin("jvm") version "1.6.21"
     kotlin("plugin.spring") version "1.6.21"
     kotlin("plugin.jpa") version "1.6.21"
+    kotlin("kapt") version "1.6.21"
 }
 
 group = "com.kyukin"
@@ -29,12 +31,9 @@ dependencies {
     runtimeOnly("mysql:mysql-connector-java")
 
     // MapStruct
-    implementation ("org.mapstruct:mapstruct:1.5.3.Final")
-    annotationProcessor ("org.mapstruct:mapstruct-processor:1.5.3.Final")
-    annotationProcessor(
-        "org.projectlombok:lombok",
-        "org.projectlombok:lombok-mapstruct-binding:0.2.0"
-    )
+    implementation("org.mapstruct:mapstruct:1.5.3.Final")
+    kapt("org.mapstruct:mapstruct-processor:1.5.3.Final")
+    kaptTest("org.mapstruct:mapstruct-processor:1.5.3.Final")
 
     implementation("io.jsonwebtoken:jjwt-api:0.11.5")
     runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.5")

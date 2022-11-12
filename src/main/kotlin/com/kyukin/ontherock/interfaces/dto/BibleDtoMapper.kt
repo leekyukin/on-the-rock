@@ -1,5 +1,7 @@
 package com.kyukin.ontherock.interfaces.dto
 
+import com.kyukin.ontherock.domain.bible.domain.Bible
+import com.kyukin.ontherock.interfaces.dto.res.BibleResponse
 import org.mapstruct.InjectionStrategy
 import org.mapstruct.Mapper
 import org.mapstruct.ReportingPolicy
@@ -10,6 +12,5 @@ import org.mapstruct.ReportingPolicy
     unmappedTargetPolicy = ReportingPolicy.ERROR
 )
 interface BibleDtoMapper {
-
-    Bible of(Bible)
+    fun of(bible: Bible): BibleResponse
 }
