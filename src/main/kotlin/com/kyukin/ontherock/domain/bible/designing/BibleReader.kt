@@ -9,4 +9,6 @@ interface BibleReader {
     fun findBiblePage(word: String, pageable: Pageable): Page<Bible>
 
     fun findBiblePage(longLabel: LongLabel, chapter: Int, pageable: Pageable): Page<Bible>
+
+    fun findBibleById(id: Long): Bible
 }

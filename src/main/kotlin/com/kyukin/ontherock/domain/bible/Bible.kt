@@ -40,5 +40,5 @@ class Bible (
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "bible_id", nullable = false, unique = true)
-    val id: Long? = null,
+    val id: Long,
 )

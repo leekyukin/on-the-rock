@@ -35,9 +35,9 @@ class User constructor(
     @Column(nullable = false)
     var profileImg: String,
 
-    @OneToMany(mappedBy = "user", cascade = [CascadeType.ALL])
-    @JoinColumn(name = "my_bible_list")
-    val myBibleList: MutableList<MyBible> = ArrayList(),
+//    @OneToMany(mappedBy = "user", cascade = [CascadeType.ALL])
+//    @JoinColumn(name = "my_bible_list")
+//    val myBibleList: MutableList<MyBible> = ArrayList(),
 
     @Column(nullable = false, unique = true)
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
