@@ -1,11 +1,13 @@
-package com.kyukin.ontherock.domain.bible.domain.repository
+package com.kyukin.ontherock.infrastructure.bible
 
-import com.kyukin.ontherock.domain.bible.domain.Bible
+import com.kyukin.ontherock.domain.bible.Bible
+import com.kyukin.ontherock.domain.bible.type.LongLabel
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface BibleRepository: JpaRepository<Bible, Long>{
+    fun findBibleById(id: Long): Bible?
 
     fun findBySentenceContains(word: String, pageable: Pageable): Page<Bible>
 
