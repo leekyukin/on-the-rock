@@ -1,6 +1,6 @@
 package com.kyukin.ontherock.global.security.auth
 
-import com.kyukin.ontherock.domain.user.domain.User
+import com.kyukin.ontherock.domain.user.User
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails

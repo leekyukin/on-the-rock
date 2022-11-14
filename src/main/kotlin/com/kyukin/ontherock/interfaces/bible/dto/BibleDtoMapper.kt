@@ -1,8 +1,8 @@
-package com.kyukin.ontherock.interfaces.dto
+package com.kyukin.ontherock.interfaces.bible.dto
 
 import com.kyukin.ontherock.domain.bible.Bible
 import com.kyukin.ontherock.domain.bible.BibleCommand
-import com.kyukin.ontherock.interfaces.dto.SearchRequest.*
+import com.kyukin.ontherock.interfaces.bible.dto.BibleSearchRequest.*
 import org.mapstruct.InjectionStrategy
 import org.mapstruct.Mapper
 import org.mapstruct.ReportingPolicy

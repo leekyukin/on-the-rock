@@ -1,6 +1,6 @@
-package com.kyukin.ontherock.domain.user.domain
+package com.kyukin.ontherock.domain.user
 
-import com.kyukin.ontherock.domain.user.domain.type.Authority
+import com.kyukin.ontherock.domain.user.type.Authority
 import com.kyukin.ontherock.global.entity.BaseTimeEntity
 import javax.persistence.*
 
@@ -43,7 +43,6 @@ class User constructor(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
 ) : BaseTimeEntity() {
-
 
     fun updateProfileImage(profileImg: String) {
         this.profileImg = profileImg

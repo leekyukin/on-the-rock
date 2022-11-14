@@ -1,4 +1,4 @@
-package com.kyukin.ontherock.interfaces.dto
+package com.kyukin.ontherock.interfaces.bible.dto
 
 import com.kyukin.ontherock.domain.bible.type.LongLabel
 import com.kyukin.ontherock.domain.bible.type.Testament

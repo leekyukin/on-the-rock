@@ -1,6 +1,6 @@
-package com.kyukin.ontherock.domain.user.domain.repository
+package com.kyukin.ontherock.infrastructure.user
 
-import com.kyukin.ontherock.domain.user.domain.User
+import com.kyukin.ontherock.domain.user.User
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface UserRepository: JpaRepository<User, Long> {

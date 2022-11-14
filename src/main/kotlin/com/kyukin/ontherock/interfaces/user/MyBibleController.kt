@@ -1,4 +1,4 @@
-//package com.kyukin.ontherock.domain.user.presentation
+package com.kyukin.ontherock.interfaces.user//package com.kyukin.ontherock.domain.user.presentation
 //
 //import com.kyukin.ontherock.domain.user.service.MyBibleService
 //import org.springframework.web.bind.annotation.PathVariable
