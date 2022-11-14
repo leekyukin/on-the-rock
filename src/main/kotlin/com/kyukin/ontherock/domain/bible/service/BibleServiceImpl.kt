@@ -2,9 +2,9 @@ package com.kyukin.ontherock.domain.bible.service
 
 import com.kyukin.ontherock.domain.bible.BibleCommand
 import com.kyukin.ontherock.domain.bible.design.BibleReader
-import com.kyukin.ontherock.interfaces.dto.BibleResponse
+import com.kyukin.ontherock.interfaces.bible.dto.BibleResponse
 import com.kyukin.ontherock.global.annotation.ServiceWithTransactionalReadOnly
-import com.kyukin.ontherock.interfaces.dto.BibleDtoMapper
+import com.kyukin.ontherock.interfaces.bible.dto.BibleDtoMapper
 import org.mapstruct.factory.Mappers
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable

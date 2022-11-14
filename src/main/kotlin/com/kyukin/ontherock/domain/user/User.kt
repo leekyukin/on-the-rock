@@ -1,6 +1,6 @@
-package com.kyukin.ontherock.domain.user.domain
+package com.kyukin.ontherock.domain.user
 
-import com.kyukin.ontherock.domain.user.domain.type.Authority
+import com.kyukin.ontherock.domain.user.type.Authority
 import com.kyukin.ontherock.global.entity.BaseTimeEntity
 import javax.persistence.*
 

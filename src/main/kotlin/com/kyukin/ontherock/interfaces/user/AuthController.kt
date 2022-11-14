@@ -1,8 +1,8 @@
-package com.kyukin.ontherock.domain.user.presentation;
+package com.kyukin.ontherock.interfaces.user;
 
-import com.kyukin.ontherock.domain.user.presentation.dto.request.UserLoginRequest
-import com.kyukin.ontherock.domain.user.presentation.dto.response.TokenResponse
 import com.kyukin.ontherock.domain.user.service.UserService
+import com.kyukin.ontherock.interfaces.user.dto.UserAuthRequest
+import com.kyukin.ontherock.interfaces.user.dto.UserResponse
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -14,9 +14,8 @@ import javax.validation.Valid
 class AuthController constructor(
     private val userService: UserService,
 ) {
-
     @PostMapping
-    fun login(@RequestBody @Valid request: UserLoginRequest): TokenResponse {
+    fun login(@RequestBody @Valid request: UserAuthRequest.Login): UserResponse.Token {
         return userService.login(request);
     }
 }

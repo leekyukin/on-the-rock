@@ -1,9 +1,9 @@
-package com.kyukin.ontherock.interfaces
+package com.kyukin.ontherock.interfaces.bible
 
 import com.kyukin.ontherock.domain.bible.service.BibleService
-import com.kyukin.ontherock.interfaces.dto.BibleDtoMapper
-import com.kyukin.ontherock.interfaces.dto.BibleResponse
-import com.kyukin.ontherock.interfaces.dto.SearchRequest.*
+import com.kyukin.ontherock.interfaces.bible.dto.BibleDtoMapper
+import com.kyukin.ontherock.interfaces.bible.dto.BibleResponse
+import com.kyukin.ontherock.interfaces.bible.dto.BibleSearchRequest.*
 import org.mapstruct.factory.Mappers
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable

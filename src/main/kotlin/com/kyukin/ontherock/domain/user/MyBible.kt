@@ -1,4 +1,4 @@
-//package com.kyukin.ontherock.domain.user.domain
+package com.kyukin.ontherock.domain.user//package com.kyukin.ontherock.domain.user.domain
 //
 //import com.kyukin.ontherock.domain.bible.Bible
 //import com.kyukin.ontherock.global.entity.BaseTimeEntity

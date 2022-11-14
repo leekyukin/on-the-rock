@@ -1,8 +1,8 @@
-package com.kyukin.ontherock.interfaces.dto
+package com.kyukin.ontherock.interfaces.bible.dto
 
 import com.kyukin.ontherock.domain.bible.type.LongLabel
 
-class SearchRequest {
+class BibleSearchRequest {
 
     data class SearchByChapterRequest constructor(
         var longLabel: LongLabel,

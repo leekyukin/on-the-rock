@@ -1,14 +1,15 @@
 package com.kyukin.ontherock.domain.user.service
 
-import com.kyukin.ontherock.domain.user.domain.User
-import com.kyukin.ontherock.domain.user.domain.repository.UserRepository
+import com.kyukin.ontherock.domain.user.User
+import com.kyukin.ontherock.domain.user.UserCommand
 import com.kyukin.ontherock.domain.user.exception.PasswordMismatchException
 import com.kyukin.ontherock.domain.user.facade.UserFacade
-import com.kyukin.ontherock.domain.user.presentation.dto.request.UserJoinRequest
-import com.kyukin.ontherock.domain.user.presentation.dto.request.UserLoginRequest
-import com.kyukin.ontherock.domain.user.presentation.dto.response.TokenResponse
-import com.kyukin.ontherock.domain.user.presentation.dto.response.UserProfileResponse
 import com.kyukin.ontherock.global.security.jwt.JwtProvider
+import com.kyukin.ontherock.infrastructure.user.UserRepository
+import com.kyukin.ontherock.interfaces.user.dto.UserAuthRequest
+import com.kyukin.ontherock.interfaces.user.dto.UserDtoMapper
+import com.kyukin.ontherock.interfaces.user.dto.UserResponse
+import org.mapstruct.factory.Mappers
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
@@ -22,21 +23,21 @@ class UserService (
 ) {
 
     @Transactional
-    fun createUser(request: UserJoinRequest) {
-
-        userFacade.validateCreateUser(request);
-        userRepository.save(request.toEntity(passwordEncoder));
+    fun createUser(command: UserCommand.Join) {
+        userFacade.validateCreateUser(command)
+        command.password = passwordEncoder.encode(command.password)
+        userRepository.save(command.toEntity());
     }
 
     @Transactional(readOnly = true)
-    fun login(request: UserLoginRequest): TokenResponse {
+    fun login(request: UserAuthRequest.Login): UserResponse.Token {
 
         val user = userFacade.findUserByEmail(request.email)
         checkPassword(request.password, user.password)
 
         val accessToken = jwtProvider.createAccessToken(request.email)
 
-        return TokenResponse(accessToken)
+        return UserResponse.Token(accessToken)
     }
 
     private fun checkPassword(actual: String, expected: String) {
@@ -46,9 +47,9 @@ class UserService (
     }
 
     @Transactional(readOnly = true)
-    fun getProfile(): UserProfileResponse {
+    fun getProfile(): UserResponse.Profile{
         val user = userFacade.getCurrentUser();
-        return UserProfileResponse.of(user)
+        return UserResponse.Profile.of(user)
     }
 
     @Transactional
