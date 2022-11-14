@@ -2,7 +2,6 @@ package com.kyukin.ontherock.domain.bible
 
 import com.kyukin.ontherock.domain.bible.type.LongLabel
 
-
 class BibleCommand {
 
      class SearchByIdRequest(
