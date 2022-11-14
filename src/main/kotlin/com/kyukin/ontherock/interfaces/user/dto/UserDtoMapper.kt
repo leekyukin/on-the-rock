@@ -15,5 +15,9 @@ interface UserDtoMapper {
 
     fun of(request: UserAuthRequest.Join): UserCommand.Join
 
+    fun of(request: UserAuthRequest.Login): UserCommand.Login
+
+    fun of(request: UserRequest.UpdateProfileImg): UserCommand.UpdateProfileImg
+
     fun of(user: User): UserResponse.Profile
 }

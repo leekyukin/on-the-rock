@@ -4,15 +4,15 @@ import com.kyukin.ontherock.domain.bible.type.LongLabel
 
 class BibleCommand {
 
-     class SearchByIdRequest(
+    class SearchByIdRequest(
         val id: Long,
     )
 
-     class SearchByWordRequest(
+    class SearchByWordRequest(
         val word: String,
     )
 
-     class SearchByChapterRequest(
+    class SearchByChapterRequest(
         val longLabel: LongLabel,
         val chapter: Int,
     )

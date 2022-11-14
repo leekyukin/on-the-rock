@@ -5,7 +5,7 @@ import com.kyukin.ontherock.infrastructure.image.s3.DefaultProfileImage
 
 class UserCommand {
 
-    data class Join(
+    class Join(
         val name: String,
         var nickname: String,
         val email: String,
@@ -28,11 +28,14 @@ class UserCommand {
                 DefaultProfileImage.URL,
             )
         }
-
     }
 
-    data class Login(
+    class Login(
         val email: String,
         val password: String,
+    )
+
+    class UpdateProfileImg(
+        val img: String,
     )
 }

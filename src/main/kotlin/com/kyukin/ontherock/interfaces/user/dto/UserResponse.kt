@@ -8,7 +8,7 @@ class UserResponse {
         val accessToken: String,
     )
 
-    data class Profile (
+    class Profile (
         val name: String,
         var nickname: String,
         val email: String,
@@ -17,7 +17,7 @@ class UserResponse {
         var address: String,
     ) {
         companion object {
-            fun of(user: User): UserResponse.Profile {
+            fun of(user: User): Profile {
                 return Profile(
                     user.name,
                     user.nickname,
