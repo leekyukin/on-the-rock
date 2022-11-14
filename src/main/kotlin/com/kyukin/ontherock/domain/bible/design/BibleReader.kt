@@ -1,4 +1,4 @@
-package com.kyukin.ontherock.domain.bible.designing
+package com.kyukin.ontherock.domain.bible.design
 
 import com.kyukin.ontherock.domain.bible.Bible
 import com.kyukin.ontherock.domain.bible.type.LongLabel

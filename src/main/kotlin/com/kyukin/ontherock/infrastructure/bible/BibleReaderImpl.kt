@@ -1,7 +1,7 @@
 package com.kyukin.ontherock.infrastructure.bible
 
 import com.kyukin.ontherock.domain.bible.Bible
-import com.kyukin.ontherock.domain.bible.designing.BibleReader
+import com.kyukin.ontherock.domain.bible.design.BibleReader
 import com.kyukin.ontherock.domain.bible.type.LongLabel
 import com.kyukin.ontherock.domain.bible.exception.BibleNotFoundException
 import com.kyukin.ontherock.domain.bible.exception.NotAvailableWordException

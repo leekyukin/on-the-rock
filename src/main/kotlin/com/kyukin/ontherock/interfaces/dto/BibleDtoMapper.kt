@@ -13,7 +13,7 @@ import org.mapstruct.ReportingPolicy
     unmappedTargetPolicy = ReportingPolicy.ERROR
 )
 interface BibleDtoMapper {
-    fun of(bible: Bible): BibleResponse
+    fun of(bible: Bible): BibleResponse.Main
 
     fun of(request: SearchByWordRequest): BibleCommand.SearchByWordRequest
 

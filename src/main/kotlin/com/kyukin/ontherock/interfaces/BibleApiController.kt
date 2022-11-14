@@ -21,7 +21,7 @@ class BibleApiController constructor(
     fun searchByWord(
         @RequestBody request: SearchByWordRequest,
         @PageableDefault(size = 10) pageable: Pageable,
-    ): Page<BibleResponse> {
+    ): Page<BibleResponse.Main> {
         val bibleCommand = bibleDtoMapper.of(request)
         return bibleService.searchByWord(bibleCommand, pageable)
     }
@@ -30,13 +30,13 @@ class BibleApiController constructor(
     fun searchChapter(
         @RequestBody request: SearchByChapterRequest,
         @PageableDefault(size = 10) pageable: Pageable,
-    ): Page<BibleResponse> {
+    ): Page<BibleResponse.Main> {
         val bibleCommand = bibleDtoMapper.of(request)
         return bibleService.searchChapter(bibleCommand, pageable)
     }
 
     @GetMapping("/{id}")
-    fun searchOneBible(@PathVariable id: Long): BibleResponse {
+    fun searchOneBible(@PathVariable id: Long): BibleResponse.Main {
         return bibleService.searchOneBible(id)
     }
 }
