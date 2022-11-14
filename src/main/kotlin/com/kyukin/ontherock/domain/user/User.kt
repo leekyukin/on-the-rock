@@ -44,7 +44,6 @@ class User constructor(
     val id: Long? = null,
 ) : BaseTimeEntity() {
 
-
     fun updateProfileImage(profileImg: String) {
         this.profileImg = profileImg
     }
