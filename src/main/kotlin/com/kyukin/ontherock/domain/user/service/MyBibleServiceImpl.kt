@@ -1,4 +1,4 @@
-//package com.kyukin.ontherock.domain.user.service
+package com.kyukin.ontherock.domain.user.service//package com.kyukin.ontherock.domain.user.service
 //
 //import com.kyukin.ontherock.domain.bible.facade.BibleFacade
 //import com.kyukin.ontherock.domain.user.domain.MyBible

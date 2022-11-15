@@ -8,7 +8,7 @@ class UserResponse {
         val accessToken: String,
     )
 
-    class Profile (
+    data class Profile (
         val name: String,
         var nickname: String,
         val email: String,

@@ -1,4 +1,4 @@
-package com.kyukin.ontherock.domain.user.service.mybible
+package com.kyukin.ontherock.domain.user.service
 
 
 interface MyBibleService {

@@ -1,4 +1,4 @@
-package com.kyukin.ontherock.domain.user.service.user
+package com.kyukin.ontherock.domain.user.service
 
 import com.kyukin.ontherock.domain.user.User
 import com.kyukin.ontherock.domain.user.UserCommand

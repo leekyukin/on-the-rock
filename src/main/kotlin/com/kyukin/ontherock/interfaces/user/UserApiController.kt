@@ -1,6 +1,6 @@
 package com.kyukin.ontherock.interfaces.user
 
-import com.kyukin.ontherock.domain.user.service.user.UserService
+import com.kyukin.ontherock.domain.user.service.UserService
 import com.kyukin.ontherock.interfaces.user.dto.UserDtoMapper
 import com.kyukin.ontherock.interfaces.user.dto.UserRequest
 import com.kyukin.ontherock.interfaces.user.dto.UserResponse

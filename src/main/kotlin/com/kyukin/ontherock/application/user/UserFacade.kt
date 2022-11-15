@@ -1,6 +1,6 @@
 package com.kyukin.ontherock.application.user
 
-import com.kyukin.ontherock.domain.user.service.user.UserServiceImpl
+import com.kyukin.ontherock.domain.user.service.UserServiceImpl
 import org.springframework.stereotype.Component
 
 @Component
